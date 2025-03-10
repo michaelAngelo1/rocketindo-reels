@@ -6,7 +6,7 @@ import { setupCounter } from './counter.js'
 document.querySelector('#app').innerHTML = `
   <div class="reels-container">
     <div class="reel" id="skincare">
-      <h1>Skincare<h1>
+      <div>Skincare</div>
       <div class="ig-ads-caption-container">
         <div class="username-container">
           <div class="logo-circle">L</div>
