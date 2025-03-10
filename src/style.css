@@ -13,6 +13,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#skincare {
+  background-color: skyblue;
+}
+
+#haircare {
+  background-color: wheat;
+}
+
+#bodycare {
+  background-color: antiquewhite;
+}
+
+#perfume {
+  background-color: brown;
+}
+
+#liptint {
+  background-color: gainsboro;
+}
+
+#maternity {
+  background-color:honeydew;
+}
+
 /* styles.css */
 body {
   margin: 0;
