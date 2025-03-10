@@ -69,6 +69,7 @@ body {
   scroll-snap-align: start;
   color: black;
   flex-shrink: 0; /* Prevent reels from shrinking */
+  position: relative;
 }
 
 /* ig ads styles */
@@ -120,7 +121,7 @@ body {
 }
 
 .ig-ads-caption-container .sponsored {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .ig-ads-caption-container .shop-now {
