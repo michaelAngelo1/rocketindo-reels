@@ -4,9 +4,6 @@ document.querySelector('#app').innerHTML = `
   <div class="reels-container">
     <div class="reel" id="skincare">
       <div>Skincare</div>
-      <video autoplay muted loop>
-        <source src="https://cdn.shopify.com/videos/c/o/v/2662e3fa7a094e1badb6e4a0708e11e7.mp4" type="video/mp4">
-      </video>
     </div>
     <div class="reel" id="haircare">
       <div>Haircare</div>
@@ -25,3 +22,14 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
+const reelsContainer = document.querySelector('.reels-container');
+
+reelsContainer.addEventListener('scroll', () => {
+  const scrollLeft = reelsContainer.scrollLeft;
+  const reelWidth = reelsContainer.offsetWidth;
+  const currentReel = Math.floor(scrollLeft / reelWidth);
+  const scrollPercentage = (scrollLeft % reelWidth) / reelWidth;
+  const rotationAngle = scrollPercentage * 60 - 30; // Adjust angle as needed
+
+  reelsContainer.style.transform = `perspective(1000px) rotateY(${rotationAngle}deg)`;
+});

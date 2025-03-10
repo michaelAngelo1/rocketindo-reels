@@ -34,11 +34,9 @@
 }
 
 #maternity {
-  background-color:honeydew;
+  background-color: honeydew;
 }
 
-/* styles.css */
-/* styles.css */
 body {
   margin: 0;
   height: 100vh;
@@ -52,15 +50,17 @@ body {
 
 .reels-container {
   height: 100vh;
-  width: 100vw; /* Use viewport width */
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Prevent vertical scrolling */
-  scroll-snap-type: x mandatory; /* Enable horizontal snap scrolling */
-  display: flex; /* Use flexbox for horizontal layout */
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 3D effect transition */
+  perspective: 1000px; /* Crucial for 3D effect */
 }
 
 .reel {
-  width: 100vw; /* Use viewport width */
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -68,16 +68,16 @@ body {
   font-size: 2em;
   scroll-snap-align: start;
   color: black;
-  flex-shrink: 0; /* Prevent reels from shrinking */
+  flex-shrink: 0;
   position: relative;
+  transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
-/* ig ads styles */
+/* IG ads styles */
 
 .ig-ads-caption-container {
   width: 100%;
   position: absolute;
-  /* top: 75%; */
   bottom: 0;
   left: 0;
   padding: 1rem;
@@ -143,5 +143,6 @@ body {
   opacity: 95;
 }
 
-/* end ig ads styles */
+/* End IG ads styles */
 
+/* Javascript to add 3D rotation on scroll */
