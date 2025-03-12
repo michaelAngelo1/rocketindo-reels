@@ -3,33 +3,25 @@ import './style.css'
 document.querySelector('#app').innerHTML = `
   <div class="reels-container">
     <div class="reel" id="skincare">
-      <div>Skincare</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Cover_24_Jan.webp?v=1737733090" alt="landing page">
+    </div>
+    <div class="reel" id="skincare">
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Skincare_24_Jan.jpg?v=1737733088" alt="skincare">
     </div>
     <div class="reel" id="haircare">
-      <div>Haircare</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Haircare_24_Jan.jpg?v=1737733087" alt="haircare">
     </div>
     <div class="reel" id="bodycare">
-      <div>Bodycare</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Bodycare_24_Jan.jpg?v=1737733088" alt="bodycare">
     </div>
     <div class="reel" id="perfume">
-      <div>Perfume</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Perfume_24_Jan.webp?v=1737733091" alt="perfume">
     </div>
     <div class="reel" id="liptint">
-      <div>Liptint</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Liptint_24_Jan.jpg?v=1737733088" alt="liptint">
     </div>
     <div class="reel" id="maternity">
-      <div>Maternity</div>
+      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Maternity_Desktop.webp?v=1741596258" alt="maternity">
     </div>
   </div>
 `
-const reelsContainer = document.querySelector('.reels-container');
-
-reelsContainer.addEventListener('scroll', () => {
-  const scrollLeft = reelsContainer.scrollLeft;
-  const reelWidth = reelsContainer.offsetWidth;
-  const currentReel = Math.floor(scrollLeft / reelWidth);
-  const scrollPercentage = (scrollLeft % reelWidth) / reelWidth;
-  const rotationAngle = scrollPercentage * 60 - 30; // Adjust angle as needed
-
-  reelsContainer.style.transform = `perspective(1000px) rotateY(${rotationAngle}deg)`;
-});
