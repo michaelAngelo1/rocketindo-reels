@@ -16,6 +16,21 @@ document.querySelector('#app').innerHTML = `
     </div>
     <div class="reel" id="bodycare">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Bodycare_24_Jan.jpg?v=1737733088" alt="bodycare">
+      <div class="ig-ads-caption-container">
+        <div class="username-container">
+          <div class="logo-circle">L</div>
+          <div class="username-column-container">
+            <div class="username-verified">
+              <div class="username">Evoke</div>
+              <div class="verified">☑️</div>
+            </div>
+            <div class="sponsored">Sponsored</div>
+          </div>
+        </div>
+        <div class="description">Evoke is a luxury bodywash aimed to cleanse the deepest scars</div>
+        <div class="shop-now"><div>Shop Now</div></div>
+      </div>
+    </div>
     </div>
     <div class="reel" id="perfume">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Perfume_24_Jan.webp?v=1737733091" alt="perfume">
