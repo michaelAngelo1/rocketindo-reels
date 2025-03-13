@@ -25,3 +25,27 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
+const reelsContainer = document.querySelector('.reels-container');
+const reels = document.querySelectorAll('.reel');
+let currentIndex = 0;
+
+reelsContainer.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Prevent default scroll
+
+    if (event.deltaY > 0) {
+        // Scrolling down (right)
+        if (currentIndex < reels.length - 1) {
+            currentIndex++;
+        }
+    } else {
+        // Scrolling up (left)
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+    }
+
+    reelsContainer.scrollTo({
+        left: reels[currentIndex].offsetLeft,
+        behavior: 'smooth',
+    });
+});

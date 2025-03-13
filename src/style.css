@@ -55,6 +55,7 @@ body {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   display: flex;
+  scroll-behavior: smooth;
 }
 
 .reel {
