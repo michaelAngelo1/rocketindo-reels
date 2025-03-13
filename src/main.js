@@ -31,7 +31,6 @@ document.querySelector('#app').innerHTML = `
         <div class="shop-now"><div>Shop Now</div></div>
       </div>
     </div>
-    </div>
     <div class="reel" id="perfume">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Perfume_24_Jan.webp?v=1737733091" alt="perfume">
     </div>
