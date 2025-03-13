@@ -39,7 +39,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -49,18 +49,20 @@ body {
 }
 
 .reels-container {
-  height: 100vh;
+  height: 100svh; /* Use 100svh */
   width: 100vw;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
+  overflow-y: scroll; /* Change to y */
+  overflow-x: hidden; /* Hide x */
+  scroll-snap-type: y mandatory; /* Change to y */
   display: flex;
+  flex-direction: column; /* Change to column */
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .reel {
   width: 100vw;
-  height: 100vh;
+  height: 100svh; /* Use 100svh */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,6 +147,24 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.go-shopping {
+  position: absolute;
+  bottom: 0;
+  /* left: 0; */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: black;
+  font-size: 1.2rem;
+  width: 80%;
+  border-radius: 3rem;
+  color: white;
+}
+
+.go-shopping-text {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* End IG ads styles */

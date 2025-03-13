@@ -7,6 +7,9 @@ document.querySelector('#app').innerHTML = `
     </div>
     <div class="reel" id="skincare">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Skincare_24_Jan.jpg?v=1737733088" alt="skincare">
+      <div class="go-shopping">
+        <div class="go-shopping-text">Go Shopping</div>
+      </div>
     </div>
     <div class="reel" id="haircare">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Haircare_24_Jan.jpg?v=1737733087" alt="haircare">
@@ -25,27 +28,3 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
-const reelsContainer = document.querySelector('.reels-container');
-const reels = document.querySelectorAll('.reel');
-let currentIndex = 0;
-
-reelsContainer.addEventListener('wheel', (event) => {
-    event.preventDefault(); // Prevent default scroll
-
-    if (event.deltaY > 0) {
-        // Scrolling down (right)
-        if (currentIndex < reels.length - 1) {
-            currentIndex++;
-        }
-    } else {
-        // Scrolling up (left)
-        if (currentIndex > 0) {
-            currentIndex--;
-        }
-    }
-
-    reelsContainer.scrollTo({
-        left: reels[currentIndex].offsetLeft,
-        behavior: 'smooth',
-    });
-});
