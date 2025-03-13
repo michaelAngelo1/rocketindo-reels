@@ -39,7 +39,7 @@
 
 body {
   margin: 0;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .reels-container {
-  height: 100svh; /* Use 100svh */
+  height: 100dvh; 
   width: 100vw;
   overflow-y: scroll; /* Change to y */
   overflow-x: hidden; /* Hide x */
@@ -62,7 +62,7 @@ body {
 
 .reel {
   width: 100vw;
-  height: 100svh; /* Use 100svh */
+  height: 100dvh; 
   display: flex;
   align-items: center;
   justify-content: center;
