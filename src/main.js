@@ -22,7 +22,7 @@ document.querySelector('#app').innerHTML = `
           <div class="username-column-container">
             <div class="username-verified">
               <div class="username">Fordive</div>
-              <div class="verified">☑️</div>
+              <div class="verified">✅</div>
             </div>
             <div class="sponsored">Sponsored</div>
           </div>
