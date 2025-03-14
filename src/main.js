@@ -21,13 +21,13 @@ document.querySelector('#app').innerHTML = `
           <div class="logo-circle">L</div>
           <div class="username-column-container">
             <div class="username-verified">
-              <div class="username">Evoke</div>
+              <div class="username">Fordive</div>
               <div class="verified">☑️</div>
             </div>
             <div class="sponsored">Sponsored</div>
           </div>
         </div>
-        <div class="description">Evoke is a luxury bodywash aimed to cleanse the deepest scars</div>
+        <div class="description">Fordive is a local perfume label with utmost priority for farthest projection</div>
         <div class="shop-now"><div>Shop Now</div></div>
       </div>
     </div>
