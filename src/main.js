@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Haircare_24_Jan.jpg?v=1737733087" alt="haircare">
     </div>
     <div class="reel" id="bodycare">
-      <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Bodycare_24_Jan.jpg?v=1737733088" alt="bodycare">
+      <video src="https://cdn.shopify.com/videos/c/o/v/2662e3fa7a094e1badb6e4a0708e11e7.mp4" alt="bodycare" autoplay loop muted playsinline></video>
       <div class="ig-ads-caption-container">
         <div class="username-container">
           <div class="logo-circle">L</div>
