@@ -49,78 +49,6 @@ body {
   position: relative;
 }
 
-/* IG ads styles */
-
-.ig-ads-caption-container {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: black;
-  opacity: 60%;
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.ig-ads-caption-container .logo-circle {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  background-color: white;
-  text-align: center;
-}
-
-.username-column-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.ig-ads-caption-container .username-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.username-verified {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.ig-ads-caption-container .sponsored {
-  font-size: 0.8rem;
-}
-
-.ig-ads-caption-container .shop-now {
-  background-color: blue;
-  opacity: 90%;
-  text-align: center;
-  padding: 1.5rem;
-  color: white;
-  border-radius: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  text-shadow: 1px 1px 2px #000000;
-}
-
-.ig-ads-caption-container .shop-now:hover {
-  opacity: 85;
-}
-
-.ig-ads-caption-container .shop-now:active {
-  opacity: 95;
-}
 
 img, video {
   width: 100%;
@@ -128,102 +56,66 @@ img, video {
   object-fit: cover;
 }
 
-
-.go-shopping {
-  position: absolute;
-  bottom: 0;
-  /* left: 0; */
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: black;
-  font-size: 1.2rem;
-  width: 80%;
-  border-radius: 3rem;
-  color: white;
-}
-
-.go-shopping-text {
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-/* End IG ads styles */
-
-/* Javascript to add 3D rotation on scroll */
-
-/* ig ads styles */
-
 .ig-ads-caption-container {
   position: absolute;
-  /* top: 75%; */
+  font-size: 1rem;
+  box-sizing: border-box;
   bottom: 0;
-  /* left: 0; */
-  padding: 1rem;
+  left: 0;
+  padding: 1.5rem;
   background-color: transparent;
   opacity: 100%;
   color: white;
   width: 100%;
+  height: 25%;
 
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.ig-ads-caption-container .logo-circle {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  background-color: white;
-  text-align: center;
-}
-
-.username-column-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.ig-ads-caption-container .username-container {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  align-items: center;
-}
+  gap: 0;
 
-.username-verified {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
+  .content-section {
+    width: 70%;
+    /* background-color: blue; */
+    /* opacity: 30%; */
+    background-color: transparent;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 
-.ig-ads-caption-container .username {
-  font-size: 1.2rem;
-}
+    .profile-section {
+      color: white;
+      margin-bottom: 1rem;
 
-.ig-ads-caption-container .sponsored {
-  font-size: 1rem;
-  font-weight: 600;
-}
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-.ig-ads-caption-container .shop-now {
-  background-color: blue;
-  opacity: 90%;
-  text-align: center;
-  padding: 1.2rem;
-  color: white;
-  border-radius: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
+      .profile-username {
+        font-weight: 600;
+      }
 
-.ig-ads-caption-container .shop-now:hover {
-  opacity: 85;
-  border-radius: 1rem;
-}
+      .image-circle {
+        margin-right: 0.5rem;
+        width: 56px;
+        height: 56px;
+        background-image: url('https://cdn.shopify.com/s/files/1/0723/1396/2741/files/logo_rocketindo.jpg?v=1742212162');
+        background-size: cover;
+        background-position: center;
+        border-radius: 3rem;
+      }
+    }
 
-.ig-ads-caption-container .shop-now:active {
-  opacity: 95;
-  border-radius: 1rem;
+    .stats-section {
+      color: white;
+    }
+  }
+
+  .buttons-section {
+    width: 30%;
+    /* background-color: green; */
+    background-color: transparent;
+  }
 }
 
 /* end ig ads styles */
