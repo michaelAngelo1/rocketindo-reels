@@ -60,7 +60,7 @@ img, video {
   position: absolute;
   font-size: 1rem;
   box-sizing: border-box;
-  bottom: 6%;
+  bottom: 9%;
   left: 0;
   padding: 1.5rem;
   background-color: transparent;
@@ -74,7 +74,7 @@ img, video {
   gap: 0;
 
   /* use this one to adapt to production */
-  /* margin-bottom: 4rem;  */
+  /* margin-bottom: 1rem;  */
 
   .content-section {
     width: 90%;
