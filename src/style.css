@@ -63,7 +63,7 @@ img, video {
   bottom: 5%;
   left: 0;
   padding: 1.5rem;
-  background-color: green;
+  background-color: transparent;
   opacity: 100%;
   color: white;
   width: 100%;
@@ -78,9 +78,9 @@ img, video {
 
   .content-section {
     width: 90%;
-    background-color: blue;
+    /* background-color: blue; */
     opacity: 100%;
-    /* background-color: transparent; */
+    background-color: transparent;
     
     display: flex;
     flex-direction: column;
@@ -153,12 +153,12 @@ img, video {
 
   .buttons-section {
     width: 13%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     gap: 0;
     align-items: center;
-    /* background-color: transparent; */
+    background-color: transparent;
 
     .icon-with-numbers, .only-icon {
       margin-bottom: 0.8rem;
