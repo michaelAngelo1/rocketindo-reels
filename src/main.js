@@ -20,7 +20,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="buttons-section">
           <div class="icon-with-numbers">
-            <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
+            <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_border_24dp_FFFFFF.png?v=1742271082" alt="fav icon">
             <div>15</div>
           </div>
           <div class="icon-with-numbers">
@@ -196,3 +196,26 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
+
+const heart = document.querySelector(".icon-with-numbers");
+const heartImg = heart.querySelector("img");
+const originalSrc = heartImg.src; 
+const alternateSrc = "https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_24dp_E93C40.png?v=1742271082"; 
+
+heartImg.addEventListener('click', function(event) {
+  heartImg.style.transition = "opacity 0.3s ease-in-out"; // Add transition
+
+  if (heartImg.src === originalSrc) {
+    heartImg.style.opacity = 0; // Fade out
+    setTimeout(() => {
+      heartImg.src = alternateSrc;
+      heartImg.style.opacity = 1; // Fade in
+    }, 100); // Delay to match transition duration
+  } else {
+    heartImg.style.opacity = 0; // Fade out
+    setTimeout(() => {
+      heartImg.src = originalSrc;
+      heartImg.style.opacity = 1; // Fade in
+    }, 100);
+  }
+});
