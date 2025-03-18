@@ -197,25 +197,30 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-const heart = document.querySelector(".icon-with-numbers");
-const heartImg = heart.querySelector("img");
-const originalSrc = heartImg.src; 
-const alternateSrc = "https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_24dp_E93C40.png?v=1742271082"; 
+const hearts = document.querySelectorAll(".icon-with-numbers"); // Select all elements
 
-heartImg.addEventListener('click', function(event) {
-  heartImg.style.transition = "opacity 0.3s ease-in-out"; // Add transition
+hearts.forEach(heart => {
+  const heartImg = heart.querySelector("img");
+  const originalSrc = heartImg.src;
+  const alternateSrc = "https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_24dp_E93C40.png?v=1742271082";
 
-  if (heartImg.src === originalSrc) {
-    heartImg.style.opacity = 0; // Fade out
-    setTimeout(() => {
-      heartImg.src = alternateSrc;
-      heartImg.style.opacity = 1; // Fade in
-    }, 100); // Delay to match transition duration
-  } else {
-    heartImg.style.opacity = 0; // Fade out
-    setTimeout(() => {
-      heartImg.src = originalSrc;
-      heartImg.style.opacity = 1; // Fade in
-    }, 100);
-  }
+  console.log("number of likes: ", heart.innerText);
+
+  heartImg.addEventListener('click', function(event) {
+    heartImg.style.transition = "opacity 0.3s ease-in-out";
+
+    if (heartImg.src === originalSrc) {
+      heartImg.style.opacity = 0;
+      setTimeout(() => {
+        heartImg.src = alternateSrc;
+        heartImg.style.opacity = 1;
+      }, 100);
+    } else {
+      heartImg.style.opacity = 0;
+      setTimeout(() => {
+        heartImg.src = originalSrc;
+        heartImg.style.opacity = 1;
+      }, 100);
+    }
+  });
 });
