@@ -73,10 +73,13 @@ img, video {
   flex-direction: row;
   gap: 0;
 
+  /* use this one to adapt to production */
+  margin-bottom: 3rem; 
+
   .content-section {
-    width: 70%;
+    width: 90%;
     /* background-color: blue; */
-    /* opacity: 30%; */
+    opacity: 100%;
     background-color: transparent;
     
     display: flex;
@@ -86,7 +89,6 @@ img, video {
     .profile-section {
       color: white;
       margin-bottom: 1rem;
-
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -108,13 +110,73 @@ img, video {
 
     .stats-section {
       color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 90%;
+      height: 125px;
+      border-radius: 1rem;
+      padding: 0.75rem;
+
+      .stats-with-pics {
+        width: 100%;
+        background-color: transparent;
+      }
+
+      .stats-with-pics {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        font-weight: 400;
+
+        .stats-pic {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          background-image: url('https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Liptint_24_Jan.jpg?v=1737733088');
+          background-size: cover;
+          background-position: center;
+          margin-right: 1rem;
+        }
+      }
+
+      .stats-shop-now {
+        margin-top: 0.625rem;
+        background-color: #6D6CF4;
+        /* height: 43px; */
+        /* width: 94%; */
+        border-radius: 0.5rem;
+        padding: 0.625rem;
+        font-weight: 600;
+      }
     }
   }
 
   .buttons-section {
-    width: 30%;
-    /* background-color: green; */
+    width: 13%;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    /* background-color: transparent; */
+
+    .icon-with-numbers, .only-icon {
+      margin-bottom: 1.5rem;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 

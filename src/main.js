@@ -23,15 +23,33 @@ document.querySelector('#app').innerHTML = `
     <div class="reel" id="liptint">
       <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Liptint_24_Jan.jpg?v=1737733088" alt="liptint">
       <div class="ig-ads-caption-container">
+
         <div class="content-section">
           <div class="profile-section">
             <div class="image-circle"></div>
             <div class="profile-username">rocketindo_liptint</div>
           </div>
-          <div class="stats-section">Stats Section</div>
+          <div class="stats-section">
+            <div class="stats-with-pics">
+              <div class="stats-pic"></div>
+              <div>15 products - 117k+ sold</div>
+            </div>
+            <div class="stats-shop-now">Shopping liptint now</div>
+          </div>
         </div>
+        
         <div class="buttons-section">
-          <div>Icons</div>
+          <div class="icon-with-numbers">
+            <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
+            <div>15</div>
+          </div>
+          <div class="icon-with-numbers">
+            <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
+            <div>117k</div>
+          </div>
+          <div class="only-icon">
+            <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/ShareIcon_White.png?v=1742207589">
+          </div>
         </div>
       </div>
     </div>
