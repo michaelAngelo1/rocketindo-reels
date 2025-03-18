@@ -74,7 +74,7 @@ img, video {
   gap: 0;
 
   /* use this one to adapt to production */
-  margin-bottom: 3rem; 
+  margin-bottom: 4rem; 
 
   .content-section {
     width: 90%;
