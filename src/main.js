@@ -19,9 +19,9 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_border_24dp_FFFFFF.png?v=1742271082" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">15</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
@@ -50,19 +50,19 @@ document.querySelector('#app').innerHTML = `
           <div class="stats-section">
             <div class="stats-with-pics">
               <div class="stats-pic"></div>
-              <div>15 products - 117k+ sold</div>
+              <div>47 products - 1.6m+ sold</div>
             </div>
             <div class="stats-shop-now">Shopping liptint now</div>
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">47</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
-            <div>117k</div>
+            <div>1.6m</div>
           </div>
           <div class="only-icon">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/ShareIcon_White.png?v=1742207589">
@@ -87,9 +87,9 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">15</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
@@ -118,9 +118,9 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">15</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
@@ -149,9 +149,9 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">15</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
@@ -180,13 +180,13 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <div class="buttons-section">
-          <div class="icon-with-numbers">
+          <div class="icon-with-numbers-fav">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/FavoriteIcon_White.png?v=1742207590" alt="fav icon">
-            <div>15</div>
+            <div class="fav-number">15</div>
           </div>
           <div class="icon-with-numbers">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/Sell_White.png?v=1742207589" alt="sell icon">
-            <div>117k</div>
+            <div>189k</div>
           </div>
           <div class="only-icon">
             <img src="https://cdn.shopify.com/s/files/1/0723/1396/2741/files/ShareIcon_White.png?v=1742207589">
@@ -197,14 +197,16 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-const hearts = document.querySelectorAll(".icon-with-numbers"); // Select all elements
+const hearts = document.querySelectorAll(".icon-with-numbers-fav"); // Select all elements
 
 hearts.forEach(heart => {
   const heartImg = heart.querySelector("img");
   const originalSrc = heartImg.src;
   const alternateSrc = "https://cdn.shopify.com/s/files/1/0723/1396/2741/files/favorite_24dp_E93C40.png?v=1742271082";
 
-  console.log("number of likes: ", heart.innerText);
+  const heartNum = heart.querySelector(".fav-number");
+  // const originalHeartNum = heartNum.textContent;
+  // const incremented = parseInt(heartNum.textContent) + 1;
 
   heartImg.addEventListener('click', function(event) {
     heartImg.style.transition = "opacity 0.3s ease-in-out";
@@ -214,12 +216,14 @@ hearts.forEach(heart => {
       setTimeout(() => {
         heartImg.src = alternateSrc;
         heartImg.style.opacity = 1;
+        heartNum.textContent = parseInt(heartNum.textContent) + 1;
       }, 100);
     } else {
       heartImg.style.opacity = 0;
       setTimeout(() => {
         heartImg.src = originalSrc;
         heartImg.style.opacity = 1;
+        heartNum.textContent = parseInt(heartNum.textContent) - 1;
       }, 100);
     }
   });

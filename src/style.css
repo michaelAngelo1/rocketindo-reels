@@ -160,7 +160,7 @@ img, video {
     align-items: center;
     background-color: transparent;
 
-    .icon-with-numbers, .only-icon {
+    .icon-with-numbers, .icon-with-numbers-fav, .only-icon {
       margin-bottom: 0.8rem;
       background-color: transparent;
       display: flex;
